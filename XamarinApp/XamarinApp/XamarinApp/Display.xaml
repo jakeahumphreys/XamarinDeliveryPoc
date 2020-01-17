@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--**********************************************************************************************************
+* Copyright © FHL.
+* All Rights Reserved.
+* This is the confidential and proprietary information of FHL.
+* The misuse of is strictly prohibited, in accordance with the terms of your agreement
+* with FHL.
+*
+* Name:				Display (Display.xaml)
+* 
+* Script Type:		XAML
+* 
+* Version:			1.0.0 - 03/09/2019 - JAH.
+*                
+* Author:           FHL 
+*
+* Purpose:		    Display Page user interface 
+*                    
+* Notes:			
+* 
+* Dependencies:		
+***********************************************************************************************************-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.Display">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="myListView" HasUnevenRows="True" ItemTapped="onItemTapped" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding username}"        Detail="{Binding role}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Grid.Column="1"
+                    Text="Back"
+                    Clicked="onBackButtonPressed"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
